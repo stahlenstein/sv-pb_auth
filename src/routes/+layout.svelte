@@ -5,15 +5,15 @@
 </script>
 
 <div class="bg-neutral text-neutral-content">
-  <div class="max-w-xl mx-auto navbar">
+  <div class="mx-auto navbar">
     <div class="navbar-start">
-      <a href="/" class="btn btn-ghost text-xl">PB + SK</a>
+      <a href="/" class="btn- btn-ghost text-xl">Floyd County Water Department</a>
     </div>
     <div class="navbar-end">
       <ul class="menu menu-horizontal">
         {#if $currentUser}
-          <li><a href="/">{$currentUser.email}</a></li>
-          <li>
+        <li><a href="/posts">Posts</a>
+          <a href="/">{$currentUser.email}</a>
             <form
               method="POST"
               action="/logout"
@@ -36,6 +36,12 @@
   </div>
 </div>
 
-<div class="max-w-xl mx-auto py-8 px-4">
+<div class="mx-16 px-4 flex justify-center">
   <slot />
 </div>
+
+<footer class="footer fixed bottom-0 footer-center p-4 bg-base-300 text-base-content">
+  <div>
+    <p>Floyd County Water Department</p>
+  </div>
+</footer>

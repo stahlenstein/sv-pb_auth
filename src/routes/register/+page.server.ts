@@ -8,6 +8,7 @@ export const actions: Actions = {
       password: string
       passwordConfirm: string
     }
+  
 
     try {
       await locals.pb.collection('users').create(data)
